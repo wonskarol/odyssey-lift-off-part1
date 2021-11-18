@@ -25,9 +25,20 @@ const typeDefs = gql`
     modules: [Module!]!
   }
 
+  type IncrementTrackViewsResponse {
+    code: Int!
+    success: Boolean!
+    message: String!
+    track: Track
+  }
+
   type Query {
     tracksForHome: [Track!]!
     track(id: ID!): Track!
+  }
+
+  type Mutation {
+    incrementTrackViews(id: ID!): IncrementTrackViewsResponse!
   }
 `;
 
