@@ -4,7 +4,7 @@ import { Layout, QueryResult } from "../components";
 import TrackDetail from "../components/track-detail";
 
 export const GET_TRACK = gql`
-  query getTracks($trackId: ID!) {
+  query getTrack($trackId: ID!) {
     track(id: $trackId) {
       id
       title

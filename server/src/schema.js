@@ -11,6 +11,8 @@ const typeDefs = gql`
     id: ID!
     title: String!
     length: Int
+    content: String
+    videoUrl: String
   }
 
   type Track {
@@ -35,6 +37,7 @@ const typeDefs = gql`
   type Query {
     tracksForHome: [Track!]!
     track(id: ID!): Track!
+    module(id: ID!): Module!
   }
 
   type Mutation {
